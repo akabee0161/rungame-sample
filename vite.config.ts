@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './',
+  base: '/labs/games/rungame/',
+  build: { outDir: 'out' },
   server: {
     port: 3000,
   },
