@@ -4,6 +4,7 @@ import { getHighScore } from '../utils/storage'
 
 interface GameOverData {
   score: number
+  isNewRecord: boolean
 }
 
 export class GameOver extends Phaser.Scene {
@@ -12,7 +13,7 @@ export class GameOver extends Phaser.Scene {
   }
 
   create(data: GameOverData): void {
-    const { score = 0 } = data
+    const { score = 0, isNewRecord = false } = data
 
     // 暗いオーバーレイ
     this.add.rectangle(
@@ -43,7 +44,6 @@ export class GameOver extends Phaser.Scene {
 
     // ハイスコア / 新記録
     const hiScore = getHighScore()
-    const isNewRecord = score >= hiScore && score > 0
     if (isNewRecord) {
       this.add
         .text(GAME_WIDTH / 2, GAME_HEIGHT / 2 + 25, '🎉 NEW RECORD!', {
