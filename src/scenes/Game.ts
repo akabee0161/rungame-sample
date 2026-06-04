@@ -151,6 +151,7 @@ export class Game extends Phaser.Scene {
     this.isGameOver = true
     const isNewRecord = this.score > 0 && this.score > getHighScore()
     saveHighScore(this.score)
+    this.player.playDeath()
     this.cameras.main.shake(300, 0.015)
     this.time.delayedCall(800, () => {
       this.scene.start(SCENE_KEYS.GAME_OVER, { score: this.score, isNewRecord })

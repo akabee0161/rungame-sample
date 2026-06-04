@@ -1,30 +1,37 @@
 // src/scenes/Preload.ts
 import Phaser from 'phaser'
-import { SCENE_KEYS, ASSET_KEYS, COLORS, PLAYER_RADIUS } from '../constants'
+import { SCENE_KEYS, ASSET_KEYS, COLORS } from '../constants'
 
 export class Preload extends Phaser.Scene {
   constructor() {
     super({ key: SCENE_KEYS.PRELOAD })
   }
 
+  preload(): void {
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_RUN, 'assets/Astronaut_Run.png', {
+      frameWidth: 24,
+      frameHeight: 24,
+    })
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_IDLE, 'assets/Astronaut_Idle.png', {
+      frameWidth: 24,
+      frameHeight: 24,
+    })
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_JUMP, 'assets/Astronaut_Jump.png', {
+      frameWidth: 24,
+      frameHeight: 24,
+    })
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_DEATH, 'assets/Astronaut_Death.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+    })
+  }
+
   create(): void {
-    this.generatePlayerTexture()
     this.generateMeteorTexture()
     this.generateUFOTexture()
     this.generateAlienTexture()
     this.generateCoinTexture()
     this.scene.start(SCENE_KEYS.TITLE)
-  }
-
-  private generatePlayerTexture(): void {
-    const r = PLAYER_RADIUS
-    const g = this.make.graphics({}, false)
-    g.fillStyle(COLORS.PLAYER_BODY)
-    g.fillCircle(r, r, r)
-    g.fillStyle(COLORS.PLAYER_VISOR)
-    g.fillCircle(r, r - 4, Math.round(r * 0.45))
-    g.generateTexture(ASSET_KEYS.PLAYER, r * 2, r * 2)
-    g.destroy()
   }
 
   private generateMeteorTexture(): void {

@@ -8,18 +8,28 @@ export const SCENE_KEYS = {
 } as const
 
 export const ASSET_KEYS = {
-  PLAYER: 'player',
+  ASTRONAUT_RUN: 'astronaut_run',
+  ASTRONAUT_IDLE: 'astronaut_idle',
+  ASTRONAUT_JUMP: 'astronaut_jump',
+  ASTRONAUT_DEATH: 'astronaut_death',
   METEOR: 'meteor',
   UFO: 'ufo',
   ALIEN: 'alien',
   COIN: 'coin',
 } as const
 
+export const ANIM_KEYS = {
+  RUN: 'anim_run',
+  IDLE: 'anim_idle',
+  JUMP: 'anim_jump',
+  DEATH: 'anim_death',
+} as const
+
 export const GAME_WIDTH = 720
 export const GAME_HEIGHT = 405
 export const GROUND_Y = GAME_HEIGHT - 50     // 355: 地面の上端 Y 座標
 export const PLAYER_X = 120
-export const PLAYER_RADIUS = 18
+export const PLAYER_SCALE = 2
 
 export const SCROLL_SPEED = 280              // px/s: 障害物の移動速度
 export const JUMP_VELOCITY = -520            // 上方向の初速度

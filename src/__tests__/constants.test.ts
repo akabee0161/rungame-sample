@@ -19,8 +19,13 @@ describe('SCENE_KEYS', () => {
 })
 
 describe('ASSET_KEYS', () => {
-  it('defines all asset keys', () => {
-    expect(ASSET_KEYS.PLAYER).toBe('player')
+  it('defines astronaut spritesheet keys', () => {
+    expect(ASSET_KEYS.ASTRONAUT_RUN).toBe('astronaut_run')
+    expect(ASSET_KEYS.ASTRONAUT_IDLE).toBe('astronaut_idle')
+    expect(ASSET_KEYS.ASTRONAUT_JUMP).toBe('astronaut_jump')
+    expect(ASSET_KEYS.ASTRONAUT_DEATH).toBe('astronaut_death')
+  })
+  it('defines obstacle and collectible keys', () => {
     expect(ASSET_KEYS.METEOR).toBe('meteor')
     expect(ASSET_KEYS.UFO).toBe('ufo')
     expect(ASSET_KEYS.ALIEN).toBe('alien')
