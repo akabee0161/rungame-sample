@@ -8,19 +8,19 @@ export class Preload extends Phaser.Scene {
   }
 
   preload(): void {
-    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_RUN, 'assets/Astronaut_Run.png', {
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_RUN, 'img/Astronaut_Run.png', {
       frameWidth: 24,
       frameHeight: 24,
     })
-    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_IDLE, 'assets/Astronaut_Idle.png', {
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_IDLE, 'img/Astronaut_Idle.png', {
       frameWidth: 24,
       frameHeight: 24,
     })
-    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_JUMP, 'assets/Astronaut_Jump.png', {
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_JUMP, 'img/Astronaut_Jump.png', {
       frameWidth: 24,
       frameHeight: 24,
     })
-    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_DEATH, 'assets/Astronaut_Death.png', {
+    this.load.spritesheet(ASSET_KEYS.ASTRONAUT_DEATH, 'img/Astronaut_Death.png', {
       frameWidth: 32,
       frameHeight: 32,
     })
