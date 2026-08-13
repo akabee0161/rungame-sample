@@ -38,7 +38,7 @@ src/
 - **グラフィック**: 全て Phaser の Graphics API で動的生成（外部画像不要）。`public/assets/Astronaut_*.png` はリファレンス用途のみ。
 - **定数**: `src/constants.ts` を唯一の変更場所とする。ハードコーディング禁止。
 - **LocalStorage**: ハイスコア保存キーは `spaceRunner_highScore`。
-- **デプロイ**: ベースパス `/labs/games/rungame/`（個人サーバー）。`npm run build` で `out/` に出力。
+- **デプロイ**: ベースパス `/play/rungame-sample/`（`ankardo.com`、Cloudflare Workers）。`npm run build` で `out/` に出力し、Wranglerでデプロイする。
 
 ## TypeScript Strictness
 
