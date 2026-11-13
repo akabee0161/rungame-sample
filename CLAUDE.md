@@ -50,3 +50,10 @@ src/
 - **カバレッジ目標**: ユーティリティ関数で 80% 以上
 - **実行環境**: jsdom（Phaser の描画は起動しない）
 - 新しいユーティリティ関数を追加するときは必ずテストを先に書く（TDD）
+
+## ブランチとプレビュー
+
+- 機能ブランチから `develop` への PR を最初に作る。`develop` にマージすると、Cloudflare Access の受付の後ろに確認用のプレビューが自動で上がる（`.github/workflows/preview.yml`）
+- 本番に出すときは、`develop` から `main` への PR をマージする（`deploy.yml` が本番に出す）
+- `preview.yml` は `develop` への push だけで動き、`wrangler deploy` は書かない。`wrangler.toml` の `preview_urls = true` は確認用プレビューのためで、本番の `workers.dev` は開かない
+- `develop` ができるまでの最初の PR（プレビューの導入そのもの）だけは `main` に向ける
