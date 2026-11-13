@@ -1,6 +1,9 @@
 name = "ankardo-game-rungame-sample"
 compatibility_date = "2026-08-13"
 
+# develop ブランチの確認用プレビュー（develop-<Worker 名>.…workers.dev）を有効にする。本番の workers.dev は開かない
+preview_urls = true
+
 routes = [
   { pattern = "ankardo.com/play/rungame-sample/*", zone_name = "ankardo.com" }
 ]
